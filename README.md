@@ -37,18 +37,44 @@ What the device do:
 7. All the process can be repeated from 1 to 6 or if the user want to track other object, just repeat step 4 to 6.
 
 ### Challenges
-- Where did you face difficulties? This could be in firmware, hardware, software, integration, etc.
-- How did you overcome these challenges?
+1. Memory management using FreeRTOS causing undefined and unexpected behavior
+   - Back tracking with commit history and experimenting with the FreeRTOS config file. Some passing knowledge of the max heap size and the behavior that caused helped in diagnosing the issue and eventually reaching the solution. 
+2. Proper RF routing for the GPS/GNSS module on the PCB
+   - We were not able to resolve this issue so we decided to substitue the GNSS module with its breakout board. 
+3. Diagonising errors with the boost regulator
+   - Debugging sessions eventually pointed to the resistors being the cause of the irregular voltage
+4. Multiple pads and traces were ripped when assembling our PCB
+   - We still are not entirely certain what caused this but it made validating our power management systems more difficult than it otherwise would have been.
+5. General ambition of the project. Too many moving parts for two members in a single semester. 
+   - It took us a little longer to get our project in a working state but reducing the scope slightly likely would have been a better approach. 
 
 ### Prototype Learnings
-- What lessons did you learn by building and testing this prototype?
-- If you had to build this device again, what would you do differently?
+#### Lessons Learned:
+- Think ahead of time about mounting solutions for the whole system
+- Learned better PCB design techniques particualarly regarding power management and planning
+- Expose I/O lines and test points.
+  - This saved us and made it possible to attach a breakout board of our GNSS module while the onboard module was unresponsive
+
+#### Changes for next time: 
+- I/O exposed on the enclosure of the box
+  - LEDs
+  - Buttons
+  - USB port
+
+- Stronger stepper motors
+  - We severly underestimated the torque of the motors we selected so there was concern on if it would be able to actually hold a small mirrorless camera  
+  
+- Integrate gearing system to get a more precise rotation in line with orbital rotation speeds. Microstepping alone likely wouldn't get the resolution we need. 
 
 ### Next Steps
-- What steps are needed to finish or improve this project?
+- Integrate an IMU to get orientation data to make it fully self-aligning
+- Further investigate the onboard GPS and redo the RF routing
+  - Might require an increase in PCB size. 
 
 ### Takeaways from ESE5160
 - What did you learn in ESE5160 through the lectures, assignments, and this course-long prototyping project?
+
+- It was interesting to go from start to finish of the design process albeit with a few steps out of order. The biggest takeaways came from the PCB design/manufacturing section since that was the content most unfamility to us. 
 
 ### Project Links
 Some project links for review are listed below.
@@ -100,7 +126,7 @@ The purpose of this section is to review the software requirements and constrain
 
 | Req ID | Requirement | Review |
 | ------ | ----------- | ------ |
-| SRS-01 | The system shall be able to locate the Polaris star based on latitude and longitude coordinates | The GPS coordinates require further refinement; the system is capable of locating the Polaris star, but further research on the accuracy of this system is required |
+| SRS-01 | The system shall be able to locate the Polaris star based on latitude and longitude coordinates | The GPS coordinates require further refinement; the system is capable of locating the Polaris star, but further research on the accuracy of this system is required. We are somewhat limited by lack of orientation data. |
 | SRS-02 | The system shall perform the polar alignment procedure based on its location relative to the Polaris star | The GPS coordinates require further refinement; further research on the accuracy of this system is required |
 | SRS-03 | The system shall track an astronomical object for a specified time set by the user | Requirement satisfied |
 | SRS-04 | The system shall start the polar alignment process once button 1 has been pressed | Requirement satisfied |
@@ -129,10 +155,12 @@ The purpose of this section is to review the software requirements and constrain
 | SRS-17 | The web interface shall display the current latitude and longitude coordinates of the system | Requirement satisfied |
 | SRS-18 | When tracking has started, the system shall display the remaining time left for tracking the astronomical object | Requirement satisfied |
 | SRS-19 | The web interface shall display the current polar alignment status: <br> <ul><li>Not-aligned</li> <li> Aligned</li></ul> | Requirement satisfied |
-| SRS-20 | The web interface shall display the current tracking status: <br> <ul> <li>Not-tracking</li> <li>Tracking</li> <li>Tracking-complete</li></ul> | Requirement satisfied partially; the system only show whether the tracking is on going or not |
+| SRS-20 | The web interface shall display the current tracking status: <br> <ul> <li>Not-tracking</li> <li>Tracking</li> <li>Tracking-complete</li></ul> | Requirement satisfied |
 | SRS-21 | The web interface should list the viewable astronomical objects from the system’s current position | Requirement satisfied |
 | SRS-22 | The web interface/dashboard shall allow the user to specify or select what astronomical object they are tracking each tracking session through | Requirement satisfied |
 | SRS-23 | The web interface shall allow the user to specify the desired duration of tracking for each session | Requirement satisfied |
+
+**NOTE**: We ran into an issue where the data GNSS data acquired had floating point precision which we were able to verify through the in circuit debugger. However, we were unable to display that data in a readable format without first converting to an integer which removed noticeable precision from the displayed coorinates. THis does not impact the operation of the PS1 but any further development would benefit from solving this issue. 
 
 #### Status Indicators
 
@@ -153,8 +181,8 @@ The purpose of this section is to review the software requirements and constrain
 
 | Req ID | Requirement | Review |
 | ------ | ----------- | ------ |
-| SRS-34 | The system shall record and store session statistics in a json file | Requirement satisfied |
-| SRS-35 | The system shall store the follow metrics: <br> <ol> <li> Latitude at the time of tracking </li> <li> Longitude at the time of tracking </li> <li> Name of desired astronomical object to track </li> <li> Celestial coordinates oftracked astronomical object</li> <li>Duration of tracking </li></ol> | Requirement satisfied |
+| SRS-34 | The system shall record and store session statistics in a json file | Requirement not satisfied |
+| SRS-35 | The system shall store the follow metrics: <br> <ol> <li> Latitude at the time of tracking </li> <li> Longitude at the time of tracking </li> <li> Name of desired astronomical object to track </li> <li> Celestial coordinates oftracked astronomical object</li> <li>Duration of tracking </li></ol> | Requirement not satisfied |
 
 ## 4. Project Photos & Screenshots
 ### Final Project Prototype
