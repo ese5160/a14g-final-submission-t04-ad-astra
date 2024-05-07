@@ -22,9 +22,9 @@ Additional features are also centered around user input and feedback. Through a 
 Traditionally, every star tracker requires polar alignment before it can be used each time. This is usually a manual process that can take a few minutes to get right. Similarly, many star trackers allow for some form of configuration to adjust the rate and for how long it tracks the object. This device intends to replicate some of these functions (on a smaller scale) but also automate some of the manual aspects involved with the process. To the best of our knowledge, this has not been a feature incorporated on any star tracker currently available for purchase.
 
 ### Device Functionality
-- Explain how your Internet-connected device is designed
-- Include sensors, actuators, and other critical components.
-- Your block diagram from earlier in this semester will be quite helpful here!
+The device functionality can be obeserved in detail in the following detailed system block diagram.
+
+![Detailed System Block Diagram](/images/Detailed%20System%20Block%20Diagram_Final.jpg)
 
 ### Challenges
 - Where did you face difficulties? This could be in firmware, hardware, software, integration, etc.
