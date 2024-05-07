@@ -26,6 +26,16 @@ The device functionality can be obeserved in detail in the following detailed sy
 
 ![Detailed System Block Diagram](/images/Detailed%20System%20Block%20Diagram_Final.jpg)
 
+What the device do:
+1. User put the device facing north in a place in northerne hemisphere
+2. The device detects the current location using GPS senso and the GPS data is sent to the dasboard for user to view.
+2. Based on user input from the dasboard, the device can start polar alignment by pressing `Update Polar Alignment` button in the dashboard.
+3. Once the message received from the server (dashboard) the device now move the stepper motor 2 on y-axis to align to the north pole.
+4. After the alignment process finished, the dashboard will indicate it to the user. Now, user can decide: (1) Which object to track and (2) how long will the object be tracked. Once user push the `Start Tracking Object` button, the tracking sequence will be commenced.
+5. When the device received the message from the server, the device start tracking the object by moving the stepper motor 1 on x-axis for the amount of time input by the user
+6. Once tracking completed, the stepper motor will move back to its initial position and the dashboard will indicate that the process is done
+7. All the process can be repeated from 1 to 6 or if the user want to track other object, just repeat step 4 to 6.
+
 ### Challenges
 - Where did you face difficulties? This could be in firmware, hardware, software, integration, etc.
 - How did you overcome these challenges?
@@ -176,8 +186,9 @@ The purpose of this section is to review the software requirements and constrain
 
 ### Node-RED
 #### Node-RED Dashboard
+![Node-RED Dashboard](/images/Node-RED%20Dashboard.png)
 #### Node-RED Backend
-
+![Node-RED Backend](/images/Node-RED%20Backend.png)
 
 ### Final System Block Diagram
 ### Simple Block Diagram
