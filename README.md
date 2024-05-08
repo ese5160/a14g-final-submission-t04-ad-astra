@@ -24,7 +24,7 @@ Traditionally, every star tracker requires polar alignment before it can be used
 ### Device Functionality
 The device functionality can be obeserved in detail in the following detailed system block diagram.
 
-![Detailed System Block Diagram](/images/Detailed%20System%20Block%20Diagram_Final.jpg)
+<img src="https://github.com/ese5160/a14g-final-submission-t04-ad-astra/assets/145785615/905ddb12-668e-4f96-a08b-f5ec5d82b2a6" alt="Detailed System Block Diagram">
 
 What the device do:
 1. User puts the device facing north somewhere in northern hemisphere.
@@ -79,11 +79,11 @@ Some project links for review are listed below.
 
  | Description | URL |
  | ----------- | --- |
- | Node-RED Dashboard | http://20.81.250.63:1880/ui |
- | Node-RED Backend | http://20.81.250.63:1880 |
- | Final Embedded C Firmware Codebases (A12G Code Repository) | https://github.com/ese5160/a12g-firmware-drivers-t04-ad-astra.git |
- | Node-RED Dashboard Code (A12G Code Repository) | https://github.com/ese5160/a12g-firmware-drivers-t04-ad-astra.git |
- | Final PCBA on Altium 365 | https://upenn-eselabs.365.altium.com/designs/C2F50C2C-DB4E-4CE0-9A4E-54B61E7DBE63 |
+ | Node-RED Dashboard | <http://20.81.250.63:1880/ui> |
+ | Node-RED Backend | <http://20.81.250.63:1880> |
+ | Final Embedded C Firmware Codebases (A12G Code Repository) | <https://github.com/ese5160/a12g-firmware-drivers-t04-ad-astra.git> |
+ | Node-RED Dashboard Code (A12G Code Repository) | <https://github.com/ese5160/a12g-firmware-drivers-t04-ad-astra.git> |
+ | Final PCBA on Altium 365 | <https://upenn-eselabs.365.altium.com/designs/C2F50C2C-DB4E-4CE0-9A4E-54B61E7DBE63> |
 
 ## 3. Hardware & Software Requirements
 
@@ -191,38 +191,42 @@ The purpose of this section is to review the software requirements and constrain
 
 ### PCBA
 #### Highlight
-![Highlight](/images/Lightbox%20Photo.JPG)
+<img src="https://github.com/ese5160/a14g-final-submission-t04-ad-astra/assets/145785615/07a96f42-7bb8-4038-abce-f55124b5c92d" alt="PCBA Highlight">
+
 #### Standalone Top View
-![Standalone Top View](/images/Standalone%20Top%20View.jpg)
+<img src="https://github.com/ese5160/a14g-final-submission-t04-ad-astra/assets/145785615/78cd7c80-48c9-4ebf-9d8c-6e3ba8819152" alt="Standalone Top View">
+
 #### Standalone Bottom View
-![Standalone Bottom View](/images/Standalone%20Bottom%20View.jpg)
+<img src="https://github.com/ese5160/a14g-final-submission-t04-ad-astra/assets/145785615/549ac357-bf85-441b-bac9-3dbf797248ff" alt="Standalone Bottom View">
+
 #### Thermal Camera Images
-![Thermal Camera Image](/images/PCBA%20Under%20Load.jpeg)
+<img src="https://github.com/ese5160/a14g-final-submission-t04-ad-astra/assets/145785615/ae9e10e5-8af2-4aa9-88a4-b46012b4c31b" alt="Thermal Camera Image">
 
 *(The image is taken while the while the board is running under load)*
 
 ### The Altium Board Design
 #### 2D View Top
-![2D View Top](/images/PCBA%202D%20Top.png)
+<img src="https://github.com/ese5160/a14g-final-submission-t04-ad-astra/assets/145785615/d06536f3-3a93-4b75-aad7-3b2406f06738" alt="2D View Top">
+
 #### 2D View Bottom
-![2D View Bottom](/images/PCBA%202D%20Bottom.png)
+<img src="https://github.com/ese5160/a14g-final-submission-t04-ad-astra/assets/145785615/36a645a6-cfc5-46d0-a692-c82d71432955" alt="2D View Bottom">
+
 #### 3D View Top
-![3D View Top](/images/PCBA%203D%20Top.png)
+<img src="https://github.com/ese5160/a14g-final-submission-t04-ad-astra/assets/145785615/e3111fae-e633-46d5-890a-80d2c24be2b5" alt="3D View Top">
+
 #### 3D View Bottom
-![3D View Bottom](/images/PCBA%203D%20Bottom.png)
+<img src="https://github.com/ese5160/a14g-final-submission-t04-ad-astra/assets/145785615/3cf47b41-f259-4a68-84d3-14e497bb530c" alt="3D View Bottom">
 
 ### Node-RED
 #### Node-RED Dashboard
-![Node-RED Dashboard](/images/Node-RED%20Dashboard.png)
+<img src="https://github.com/ese5160/a14g-final-submission-t04-ad-astra/assets/145785615/59ab5c44-fb75-4f36-a234-2c07537a9ba7" alt="Node-RED Dashboard">
+
 #### Node-RED Backend
-![Node-RED Backend](/images/Node-RED%20Backend.png)
+<img src="https://github.com/ese5160/a14g-final-submission-t04-ad-astra/assets/145785615/fac13edf-3a87-415c-94b0-3ec169e4505c" alt="Node-RED Backend">
 
 ### Final System Block Diagram
 ### Simple Block Diagram
-![Simple System Block Diagram](/images/Simple%20System%20Block%20Diagram_Final.jpg)
+<img src="https://github.com/ese5160/a14g-final-submission-t04-ad-astra/assets/145785615/7cf1fafa-5598-46d7-bbc0-ae9fc5320804" alt="Simple System Block Diagram">
+
 ### Detailed Block Diagram
-![Detailed System Block Diagram](/images/Detailed%20System%20Block%20Diagram_Final.jpg)
-
-
-## Project Gallery
-<img src="https://github.com/ese5160/a14g-final-submission-t04-ad-astra/assets/145785615/cdac0e15-00d2-45ac-b93f-bf38c33e131d" width="15%"> <img src="https://github.com/ese5160/a14g-final-submission-t04-ad-astra/assets/145785615/b08e8d69-f3d6-46b1-9b9d-93870662f6d3" width="15%"> <img src="https://github.com/ese5160/a14g-final-submission-t04-ad-astra/assets/145785615/7e8d0e5e-9420-4e62-8863-dee3d13ae871" width="15%"> <img src="https://github.com/ese5160/a14g-final-submission-t04-ad-astra/assets/145785615/aabb891e-30b4-4922-8446-3192b475f09c" width="15%"> <img src="https://github.com/ese5160/a14g-final-submission-t04-ad-astra/assets/145785615/b751fe7c-3717-41c8-bfb1-46913ec1e044" width="15%"> <img src="https://github.com/ese5160/a14g-final-submission-t04-ad-astra/assets/145785615/88e8525c-d85f-4bea-b590-e146b7814e83" width="15%"> <img src="https://github.com/ese5160/a14g-final-submission-t04-ad-astra/assets/145785615/03469d6b-add8-43c5-9eff-0afeedaa7621" width="15%"> <img src="https://github.com/ese5160/a14g-final-submission-t04-ad-astra/assets/145785615/3fcb9a88-209e-45ee-88e4-083476805973" width="15%"> <img src="https://github.com/ese5160/a14g-final-submission-t04-ad-astra/assets/145785615/fbe589ed-1d59-4194-b698-d462b9325bc1" width="15%"> <img src="https://github.com/ese5160/a14g-final-submission-t04-ad-astra/assets/145785615/4047e00a-308f-4e64-bb24-248679df8a34" width="15%"> <img src="https://github.com/ese5160/a14g-final-submission-t04-ad-astra/assets/145785615/26ba9ee9-534c-4797-8456-cc2121abfa16" width="15%"> <img src="https://github.com/ese5160/a14g-final-submission-t04-ad-astra/assets/145785615/f47f4dee-22d0-48db-b885-831bc6493238" width="15%">
+<img src="https://github.com/ese5160/a14g-final-submission-t04-ad-astra/assets/145785615/905ddb12-668e-4f96-a08b-f5ec5d82b2a6" alt="Detailed System Block Diagram">
