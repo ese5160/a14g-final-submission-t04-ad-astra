@@ -24,8 +24,6 @@ Traditionally, every star tracker requires polar alignment before it can be used
 ### Device Functionality
 The device functionality can be obeserved in detail in the following detailed system block diagram.
 
-<img src="/images/Detailed%20System%20Block%20Diagram_Final.jpg" alt="Detailed System Block Diagram">
-
 ![Detailed System Block Diagram](/images/Detailed%20System%20Block%20Diagram_Final.jpg)
 
 What the device do:
@@ -78,6 +76,7 @@ What the device do:
 
 ### Project Links
 Some project links for review are listed below.
+
  | Description | URL |
  | ----------- | --- |
  | Node-RED Dashboard | http://20.81.250.63:1880/ui |
