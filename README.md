@@ -9,6 +9,18 @@
 
 ## 1. Video Presentation
 
+### Introduction
+This video presentation explained the project in general. The video can be accessed in the following URL.
+<br><https://drive.google.com/file/d/1v15rwJ6hfAnth5Jb4qp1i7n2fG27neqQ/view?usp=sharing>
+
+### Functionality Demo
+This video presented the device functionality demo in detail. The video can be accessed in the following URL.
+<br><https://drive.google.com/file/d/1qdvwb2m9TCKmDlxzcKZrhUnrN8dQ3L_Q/view?usp=sharing>
+
+### OTAFU Demo
+This video presented the OTAFU demo in detail. The video can be accessed in the following URL.
+<br><https://drive.google.com/file/d/1u-ZVgk9OZaX1GkLECISm4cKjSkv0HLOG/view?usp=sharing>
+
 ## 2. Project Summary
 
 ### Device Description
