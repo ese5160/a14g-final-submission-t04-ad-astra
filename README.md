@@ -27,14 +27,14 @@ The device functionality can be obeserved in detail in the following detailed sy
 ![Detailed System Block Diagram](/images/Detailed%20System%20Block%20Diagram_Final.jpg)
 
 What the device do:
-1. User put the device facing north in a place in northerne hemisphere
-2. The device detects the current location using GPS senso and the GPS data is sent to the dasboard for user to view.
-2. Based on user input from the dasboard, the device can start polar alignment by pressing `Update Polar Alignment` button in the dashboard.
-3. Once the message received from the server (dashboard) the device now move the stepper motor 2 on y-axis to align to the north pole.
-4. After the alignment process finished, the dashboard will indicate it to the user. Now, user can decide: (1) Which object to track and (2) how long will the object be tracked. Once user push the `Start Tracking Object` button, the tracking sequence will be commenced.
-5. When the device received the message from the server, the device start tracking the object by moving the stepper motor 1 on x-axis for the amount of time input by the user
-6. Once tracking completed, the stepper motor will move back to its initial position and the dashboard will indicate that the process is done
-7. All the process can be repeated from 1 to 6 or if the user want to track other object, just repeat step 4 to 6.
+1. User puts the device facing north somewhere in northern hemisphere.
+2. The device detects the current location using GPS sensor and the GPS data is sent to the dasboard for user to view.
+3. Based on user input from the dasboard, the device can start polar alignment by pressing `Update Polar Alignment` button in the dashboard.
+4. Once the message received from the server (dashboard) the device now move the stepper motor 2 on y-axis to align to the north pole.
+5. After the alignment process finished, the dashboard will indicate it to the user. Now, user can decide: (1) Which object to track and (2) how long will the object be tracked. Once user push the `Start Tracking Object` button, the tracking sequence will be commenced.
+6. When the device received the message from the server, the device start tracking the object by moving the stepper motor 1 on x-axis for the amount of time input by the user.
+7. Once tracking completed, the stepper motor will move back to its initial position and the dashboard will indicate that the process is done.
+8. All the process can be repeated from 1 to 6 or if the user want to track other object, just repeat step 4 to 6.
 
 ### Challenges
 1. Memory management using FreeRTOS causing undefined and unexpected behavior
@@ -51,7 +51,7 @@ What the device do:
 ### Prototype Learnings
 #### Lessons Learned:
 - Think ahead of time about mounting solutions for the whole system
-- Learned better PCB design techniques particualarly regarding power management and planning
+- Learned better PCB design techniques particularly regarding power management and planning
 - Expose I/O lines and test points.
   - This saved us and made it possible to attach a breakout board of our GNSS module while the onboard module was unresponsive
 
@@ -64,16 +64,14 @@ What the device do:
 - Stronger stepper motors
   - We severly underestimated the torque of the motors we selected so there was concern on if it would be able to actually hold a small mirrorless camera  
   
-- Integrate gearing system to get a more precise rotation in line with orbital rotation speeds. Microstepping alone likely wouldn't get the resolution we need. 
+- Integrate gearing system to get a more precise rotation in line with orbital rotation speeds. Microstepping alone likely wouldn't get the resolution we need.
 
 ### Next Steps
 - Integrate an IMU to get orientation data to make it fully self-aligning
 - Further investigate the onboard GPS and redo the RF routing
-  - Might require an increase in PCB size. 
+  - Might require an increase in PCB size.
 
 ### Takeaways from ESE5160
-- What did you learn in ESE5160 through the lectures, assignments, and this course-long prototyping project?
-
 - It was interesting to go from start to finish of the design process albeit with a few steps out of order. The biggest takeaways came from the PCB design/manufacturing section since that was the content most unfamility to us. 
 
 ### Project Links
